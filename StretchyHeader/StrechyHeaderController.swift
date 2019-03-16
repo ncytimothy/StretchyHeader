@@ -16,8 +16,13 @@ class StrechyHeaderController: UICollectionViewController, UICollectionViewDeleg
     fileprivate let headerId = "headerId"
     fileprivate let padding: CGFloat = 16
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
+        collectionView.contentInsetAdjustmentBehavior = .never
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)

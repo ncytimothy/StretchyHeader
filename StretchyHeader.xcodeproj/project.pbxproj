@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4156662223D094300BCA4EB /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4156661223D094300BCA4EB /* StretchyHeaderLayout.swift */; };
 		C4B9E486223BB78200143384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9E485223BB78200143384 /* AppDelegate.swift */; };
 		C4B9E488223BB78200143384 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9E487223BB78200143384 /* ViewController.swift */; };
 		C4B9E48B223BB78200143384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B9E489223BB78200143384 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4156661223D094300BCA4EB /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		C4B9E482223BB78200143384 /* StretchyHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StretchyHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B9E485223BB78200143384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B9E487223BB78200143384 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4156660223D092600BCA4EB /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C4156661223D094300BCA4EB /* StretchyHeaderLayout.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		C4B9E479223BB78200143384 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 				C4B9E485223BB78200143384 /* AppDelegate.swift */,
 				C4B9E487223BB78200143384 /* ViewController.swift */,
 				C4B9E497223BB84300143384 /* StrechyHeaderController.swift */,
+				C4156660223D092600BCA4EB /* Custom */,
 				C4B9E499223BB9BB00143384 /* HeaderView.swift */,
 				C4B9E49B223BBE0B00143384 /* ExtensionUIView.swift */,
 				C4B9E489223BB78200143384 /* Main.storyboard */,
@@ -144,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4156662223D094300BCA4EB /* StretchyHeaderLayout.swift in Sources */,
 				C4B9E488223BB78200143384 /* ViewController.swift in Sources */,
 				C4B9E486223BB78200143384 /* AppDelegate.swift in Sources */,
 				C4B9E498223BB84300143384 /* StrechyHeaderController.swift in Sources */,

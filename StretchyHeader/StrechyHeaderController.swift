@@ -19,6 +19,8 @@ class StrechyHeaderController: UICollectionViewController, UICollectionViewDeleg
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
+    var headerView: HeaderView?
     
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
@@ -55,9 +57,22 @@ class StrechyHeaderController: UICollectionViewController, UICollectionViewDeleg
         return CGSize(width: view.frame.width - 2 * padding, height: 50)
     }
     
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        print(contentOffsetY)
+        
+        if contentOffsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
+        }
+        
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
+        // how to get the header
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-        return header
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
+        return headerView!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
